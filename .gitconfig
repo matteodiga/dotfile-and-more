@@ -1,0 +1,22 @@
+[user]
+    name = ""
+    email = ""
+[core]
+    editor = nvim
+    pager = less -S
+[merge]
+    tool = nvim -d
+[alias]
+    s = status
+    b = branch
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    last2 = log -2 HEAD
+    last3 = log -3 HEAD
+    lastsha = log --format="%H" -n 1
+    tree = log --decorate --graph --oneline --all
+    t = log --decorate --graph --oneline --all
+    ltree = log --decorate --graph --oneline
+    lt = log --decorate --graph --oneline
+[color]
+    ui = auto
