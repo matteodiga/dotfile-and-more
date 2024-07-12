@@ -1,0 +1,44 @@
+# Bash config file
+#
+# to source this file every time a bash is invoked, add this command to your ".bashrc" file
+#
+## Source custom bash configuration file
+#if [ -f ~/.bash_conf ]; then
+#    . ~/.bash_conf
+#fi
+
+# bin path
+PATH=$PATH:~/.local/bin/
+PATH=$PATH:/usr/sbin/
+PATH=$PATH:/usr/local/go/bin
+PATH=$PATH:~/go/bin/
+
+# aliases
+alias ll="ls -l"
+alias grep='grep --color=always'
+alias nv='nvim'
+alias explorer-here='xdg-open .'
+
+# pipe to "cc" to copy stdout of the piped command
+# copy to system wide clipboard (register +)
+alias cc="xclip -selection clipboard"
+
+mtree() {
+    tree -L $1
+}
+
+# fasd initialization
+eval "$(fasd --init auto)"
+
+# bash history configuration
+export HSTR_CONFIG=hicolor,raw-history-view,hide-help,prompt-bottom       # get more colors
+shopt -s histappend              # append new history items to .bash_history
+export HISTCONTROL=ignorespace   # leading space hides commands from history
+export HISTFILESIZE=10000        # increase history file size (default is 500)
+export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
+# ensure synchronization between bash memory and history file
+export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
+# if this is interactive shell, then bind hstr to Ctrl-r (for Vi mode check doc)
+if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hstr -- \C-j"'; fi
+# if this is interactive shell, then bind 'kill last command' to Ctrl-x k
+if [[ $- =~ .*i.* ]]; then bind '"\C-xk": "\C-a hstr -k \C-j"'; fi
