@@ -1,0 +1,7 @@
+{
+  "keyMappings": "unmap J\nunmap H\nunmap K\nunmap L\nmap J goBack\nmap K goForward\nmap H previousTab\nmap L nextTab",
+  "scrollStepSize": 50,
+  "searchEngines": "w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\ny: https://www.youtube.com/results?search_query=%s Youtube\na: https://www.amazon.it/s/?field-keywords=%s Amazon\ntei: https://translate.google.com/#en/it/%s\ntie: https://translate.google.com/#it/en/%s\nconiuga: https://it.bab.la/coniugazione/inglese/%s",
+  "settingsVersion": "2.1.2",
+  "exclusionRules": []
+}
