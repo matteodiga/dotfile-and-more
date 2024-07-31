@@ -39,7 +39,7 @@ set autoindent              " indent a new line the same amount as the line just
 set directory=$HOME/.local/share/nvim/swap//     " set swap folder
 set backupdir=$HOME/.local/share/nvim/backup//   " set backup folder
 set backup                  " enable backup
-silent !mkdir -p $HOME/.local/share/nvim/backup/ " create backup folder
+silent !mkdir -p $HOME/.local/share/nvim/backup/
 
 " -----------------------------------------------------------------------------
 " ### PLUGINS -----------------------------------------------------------------
@@ -134,6 +134,15 @@ noremap <up> <nop>
 noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
+
+" ctrl-[hjkl] to move between the active pane split
+noremap <silent> <c-k> :wincmd k<CR>
+noremap <silent> <c-j> :wincmd j<CR>
+noremap <silent> <c-h> :wincmd h<CR>
+noremap <silent> <c-l> :wincmd l<CR>
+
+" insert not expandable tab (useful when expandtab is setted and you are editing a pure tab file)
+inoremap <S-Tab> <C-V><Tab>
 
 " line scroll and page scroll -> Alt + e-y/f-b
 map <ESC>e <A-e>
