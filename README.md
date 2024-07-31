@@ -34,6 +34,7 @@ Here the list of useful applications I use without custom configuration file (ju
 - `i3lock` -> alternative i3lock that display time (https://github.com/Lixxia/i3lock)
 - `hstr` -> bash shell history suggest box - easy view, navigate, search (https://github.com/dvorka/hstr)
 - `fasd` -> quick access to files and directories based on access frequency (https://github.com/clvv/fasd)
+- `bat` -> a cat(1) clone with wings (https://github.com/sharkdp/bat)
 
 
 ---
