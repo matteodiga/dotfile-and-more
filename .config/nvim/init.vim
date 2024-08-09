@@ -40,6 +40,7 @@ set directory=$HOME/.local/share/nvim/swap//     " set swap folder
 set backupdir=$HOME/.local/share/nvim/backup//   " set backup folder
 set backup                  " enable backup
 silent !mkdir -p $HOME/.local/share/nvim/backup/
+set splitright              " split vim with new window to the right
 
 " -----------------------------------------------------------------------------
 " ### PLUGINS -----------------------------------------------------------------
@@ -70,7 +71,7 @@ call plug#end()
 
 " disable coc startup warning
 let g:coc_disable_startup_warning = 1
-"accept first suggestion with enter
+" accept first suggestion with enter
 inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 " open nerdtree if no file is being passed to editor
 autocmd VimEnter * if argc() == 0 | NERDTree | endif
