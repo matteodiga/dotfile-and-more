@@ -160,6 +160,10 @@ bindsym $mod+shift+m exec arandr
 # Using rofi as dmenu replacement:
 bindsym $mod+o exec rofi -show drun
 
+# Add/Remove left and right gaps (useful to center the window in wide monitor)
+bindsym $mod+m exec --no-startup-id ~/.config/i3/custom_scripts/left_right_gaps.sh 400
+bindsym $mod+n exec --no-startup-id ~/.config/i3/custom_scripts/left_right_gaps.sh 0
+
 # -----------------------------------------------------------------------------
 # ### WORKSPACE ---------------------------------------------------------------
 # -----------------------------------------------------------------------------
@@ -218,6 +222,7 @@ set $bg_color #000000
 set $text_color #FFFFFF
 set $focused_border #7E8696
 set $focused_bg #2F343F
+
 set $focused_text #FFFFFF
 set $inactive_border #2F343F
 set $inactive_bg #2F343F
