@@ -24,6 +24,8 @@ Additionally, the repository includes the following directories:
     - `rofi` -> rofi theme
 - `misc` -> contains various file for applications (non shell too):
     - `vimium-options.json` -> browser extension configuration file for keyboard-based vim style navigation
+- `template` -> contains template file:
+    - `sh_posix_script_template.sh` -> template for sh shell posix compliant script
 - `tmux` -> custom script used by tmux
 
 ## Useful Tools
