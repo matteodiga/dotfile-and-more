@@ -9,6 +9,8 @@
 [alias]
     s = status
     b = branch
+    f = fetch
+    fp = fetch --prune
     unstage = reset HEAD --
     last = log -1 HEAD
     last2 = log -2 HEAD
