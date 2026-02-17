@@ -19,9 +19,19 @@ alias grep='grep --color=always'
 alias nv='nvim'
 alias explorer-here='xdg-open .'
 
-# pipe to "cc" to copy stdout of the piped command
-# copy to system wide clipboard (register +)
-alias cc="xclip -selection clipboard"
+# copy to system clip
+# usage:
+# ccc text to copy
+# cat file.txt | ccc
+ccc() {
+  if [ -t 0 ]; then
+    # no stdin → use arguments
+    printf "%s" "$*" | xclip -selection clipboard
+  else
+    # stdin provided
+    xclip -selection clipboard
+  fi
+}
 
 mtree() {
     tree -L $1
