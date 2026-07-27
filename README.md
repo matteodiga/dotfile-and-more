@@ -37,6 +37,9 @@ Here the list of useful applications I use without custom configuration file (ju
 - `hstr` -> bash shell history suggest box - easy view, navigate, search (https://github.com/dvorka/hstr)
 - `fasd` -> quick access to files and directories based on access frequency (https://github.com/clvv/fasd)
 - `bat` -> a cat(1) clone with wings (https://github.com/sharkdp/bat)
+- `fd` -> A simple, fast and user-friendly alternative to 'find' (https://github.com/sharkdp/fd)
+- `ag` -> A code-searching tool similar to ack, but faster. (https://github.com/ggreer/the_silver_searcher)
+- `autorandr` -> Auto-detect the connected display hardware and load the appropriate X11 setup using xrandr (https://github.com/phillipberndt/autorandr)
 
 
 ---
