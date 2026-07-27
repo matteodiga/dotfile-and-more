@@ -22,3 +22,5 @@
     lt = log --decorate --graph --oneline
 [color]
     ui = auto
+[init]
+	defaultBranch = main

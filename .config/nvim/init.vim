@@ -62,10 +62,17 @@ call plug#begin()
 Plug 'https://github.com/preservim/nerdtree.git'
 Plug 'https://github.com/vim-airline/vim-airline.git'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-Plug 'dominikduda/vim_current_word'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'github/copilot.vim'
+Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'main' }
+Plug 'nvim-lua/plenary.nvim'
 
 call plug#end()
+
+lua << EOF
+require("CopilotChat").setup({})
+EOF
+
 
 " plugin options
 

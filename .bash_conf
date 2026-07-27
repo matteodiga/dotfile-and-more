@@ -10,6 +10,7 @@
 # bin path
 PATH=$PATH:~/.local/bin/
 PATH=$PATH:/usr/sbin/
+PATH=$PATH:/usr/local/bin
 PATH=$PATH:/usr/local/go/bin
 PATH=$PATH:~/go/bin/
 
@@ -52,3 +53,6 @@ export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
 if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hstr -- \C-j"'; fi
 # if this is interactive shell, then bind 'kill last command' to Ctrl-x k
 if [[ $- =~ .*i.* ]]; then bind '"\C-xk": "\C-a hstr -k \C-j"'; fi
+
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools

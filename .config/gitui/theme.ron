@@ -1,8 +1,3 @@
-# Theme for gitui
-#
-# This file needs to be stored as
-#   ~/.config/gitui/theme.ron
-
 (
     selected_tab: Reset,
     command_fg: White,
